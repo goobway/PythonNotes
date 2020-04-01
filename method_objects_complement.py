@@ -73,7 +73,8 @@ class Car:
 
     # an info method that returns a string description of the car
     def __str__(self):
-        info = str(self.year)+" "+self.make+" "+self.model+" "+str(self.odometer)
+        info = str(self.year)+" "+self.make+" " + \
+            self.model+" "+str(self.odometer)
         return info
 
     # add one method that will be able to increment the odometer and return some info
@@ -89,3 +90,58 @@ print(mycar1)
 mycar1.increment_odometer(1000)
 print(mycar2)
 mycar2.increment_odometer(2000)
+
+
+# DATA TYPE REVISITED
+'''
+The function "type" is used to return a type of a given variable:
+<class 'int'>, <class 'float'>, <class 'str'>, <class 'bool'>, etc.
+The data type of a given variable is then defined using a class
+It means that all variable are objects in Python and we could potentially make use of some built in functions available
+For example, some methods for float:
+'''
+
+x = 3.5
+print(x.is_integer())
+print((3.0).is_integer())
+print(x.as_integer_ratio())
+print((1.5).as_integer_ratio())
+
+# A lot of useful methods are avaible for strings.
+phrase = "Hello Students"
+
+print(phrase)
+print(phrase.lower())
+print("Hello Students".lower())
+print(phrase.upper())
+print(phrase.isupper())
+print(phrase.upper().isupper())
+print(phrase.lower().capitalize())
+print(" Hello Students ".strip())
+print("---Hello Students-".strip("-"))
+print("---Hello Student-".lstrip("-"))
+print("---Hello Students-".rstrip("-"))
+print(phrase.replace("Students", "Prof"))
+
+
+# Here are some list methods.
+animals = ["lion", "turtle", "cat", "dog"]
+
+print(animals)
+animals.append("fish")
+print(animals)
+animals.insert(1, "bird")  # insert at index 1
+print(animals)
+animals.remove("lion")
+print(animals)
+animals.append("turtle")
+print(animals)
+print(animals.count("turtle"))
+animals.reverse()
+print(animals)
+new_animals = animals.copy()
+animals.sort()  # sort in place
+print(animals)
+print(animals == new_animals)
+animals.clear()  # clear the list
+print(animals)
