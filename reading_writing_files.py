@@ -61,4 +61,17 @@ print(mylist)
 
 # second, let us learn about a trick for splitting list
 i1, i2, i3, i4 = ["Welcome", "to", "New", "York"]
-print(i1,i2,i3,i4)
+print(i1, i2, i3, i4)
+
+# let us now revisit the input function to be able to accept multiple data from the user
+my_string_input = input("Enter multiple data= ")
+my_list_of_data = my_string_input.split()
+# this is the same as...
+my_list_of_data = input("Enter multiple data= ").split()
+
+# application
+print("Quadratic Equation f(x)=ax**2+bx+c")
+# ask user to input coeffiecient values
+a, b, c = input("Enter value for a, b, and c: ").split()
+# display user equation
+print("Equation is: (%s)x**2+(%s)x+(%s)" % (a, b, c))
